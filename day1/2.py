@@ -3,7 +3,7 @@ from collections import Counter, defaultdict
 
 
 def get_data(file_name):
-    with open(file_name, 'r') as file:
+    with open(file_name, "r") as file:
         for line in file:
             _n1, _n2 = line.strip().split("   ")
             yield int(_n1), int(_n2)
@@ -11,7 +11,7 @@ def get_data(file_name):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--filename', type=str)
+    parser.add_argument("-f", "--filename", type=str)
     args = parser.parse_args()
     left_list, right_list = [], []
 
